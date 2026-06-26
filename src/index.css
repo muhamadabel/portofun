@@ -567,6 +567,14 @@ section {
   color: var(--paper);
 }
 
+/* band yang ngambang di depan (parallax + fade) */
+.parallax-band {
+  position: relative;
+  z-index: 30;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
 /* ---------- MARQUEE ---------- */
 .marquee {
   position: relative;

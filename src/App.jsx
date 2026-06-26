@@ -11,6 +11,7 @@ import Projects from './sections/Projects.jsx'
 import Contact from './sections/Contact.jsx'
 import Loader from './ui/Loader.jsx'
 import { Checker } from './ui/Decor.jsx'
+import Parallax from './ui/Parallax.jsx'
 import { scrollState } from './store.js'
 
 export default function App() {
@@ -84,12 +85,18 @@ export default function App() {
       <div className="content" onClick={handleAnchor}>
         <Nav />
         <Hero />
-        <Checker />
+        <Parallax speed={0.2}>
+          <Checker />
+        </Parallax>
         <About />
         <Stack />
-        <Marquee />
+        <Parallax speed={0.26}>
+          <Marquee />
+        </Parallax>
         <Github />
-        <Checker />
+        <Parallax speed={0.2}>
+          <Checker />
+        </Parallax>
         <Projects />
         <Contact />
       </div>
