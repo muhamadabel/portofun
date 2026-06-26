@@ -27,7 +27,7 @@ export default function Loader({ onDone }) {
   return (
     <div className={`loader ${done ? 'done' : ''}`}>
       <div className="star-spin" />
-      <div className="pct">loading — {pct}%</div>
+      <div className="pct">loading {pct}%</div>
     </div>
   )
 }

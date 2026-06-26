@@ -11,7 +11,7 @@ export default function Contact() {
       <Car className="front" style={{ bottom: '5%', right: '4%', transform: 'rotate(-2deg)' }} color="var(--blue)" />
 
       <Reveal as="div" className="eyebrow" style={{ justifyContent: 'center' }}>
-        contact — ngobrol yuk
+        contact · ngobrol yuk
       </Reveal>
       <Reveal as="h2" className="big" delay={50}>
         Let's <em>connect</em>
@@ -27,7 +27,7 @@ export default function Contact() {
       </Reveal>
 
       <Reveal as="p" className="footer-note" delay={220}>
-        © {new Date().getFullYear()} {profile.name} — built from scratch, no template ★
+        © {new Date().getFullYear()} {profile.name} · built from scratch, no template ★
       </Reveal>
     </section>
   )

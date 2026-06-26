@@ -9,7 +9,7 @@ export default function Hero() {
       <Sparkle className="front spin-pop" style={{ top: '28%', left: '23%', width: 'clamp(36px, 5vw, 66px)' }} color="var(--orange)" />
       <Sparkle className="front" style={{ bottom: '26%', left: '2%' }} color="var(--pink)" />
       <Badge style={{ bottom: '12%', left: '4%' }} center="★" />
-      <Kata style={{ top: '22%', right: '6%' }}>ポートフォリオ • 777</Kata>
+      <Kata style={{ top: '22%', right: '6%' }}>ポートフォリオ • 21</Kata>
 
       <div className="top">
         <span>★ PORTFOLIO 2026</span>

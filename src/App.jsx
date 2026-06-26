@@ -48,7 +48,7 @@ export default function App() {
     }
   }, [])
 
-  // Nudge resize beberapa frame setelah mount — R3F kadang miss ukuran awal
+  // Nudge resize beberapa frame setelah mount, R3F kadang miss ukuran awal
   // pas canvas mount di belakang loader (ResizeObserver telat di sebagian webview).
   useEffect(() => {
     const t1 = requestAnimationFrame(() => window.dispatchEvent(new Event('resize')))

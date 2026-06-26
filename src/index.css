@@ -27,7 +27,7 @@
   --font-head: 'Hanken Grotesk', system-ui, sans-serif;
   --font-body: 'Hanken Grotesk', system-ui, sans-serif;
   --font-mono: 'Space Mono', ui-monospace, monospace;
-  /* font custom (kece) — Singsong buat headline gede, Heyam buat judul section */
+  /* font custom (kece): Singsong buat headline gede, Heyam buat judul section */
   --font-hero: 'Singsong', 'Hanken Grotesk', sans-serif;
   --font-title: 'Heyam', 'Hanken Grotesk', sans-serif;
 }
@@ -908,8 +908,8 @@ section {
   transform: rotate(8deg) scale(1.08);
 }
 
-/* ---- animasi siluet (biar nggak kaku) — di-apply ke <svg> dalem .deco
-   supaya rotasi/posisi inline di div tetep kepake ---- */
+/* animasi siluet (biar nggak kaku): di-apply ke <svg> dalem .deco
+   supaya rotasi/posisi inline di div tetep kepake */
 .deco svg {
   transform-origin: 50% 50%;
   will-change: transform;

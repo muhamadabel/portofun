@@ -53,7 +53,7 @@ export function Flower({ className = '', style, petal = '#1e3ae0', center = '#f4
   )
 }
 
-// Roda widebody (tire + velg) — cx pusat roda.
+// Roda widebody (tire + velg), cx pusat roda.
 function Wheel({ cx, detail }) {
   const cy = 84
   return (
@@ -82,7 +82,7 @@ function Wheel({ cx, detail }) {
   )
 }
 
-// Porsche 911 RWB widebody — side profile + sayap GT.
+// Porsche 911 RWB widebody, side profile + sayap GT.
 function CarSvg({ detail = true }) {
   return (
     <svg viewBox="0 0 240 115">

@@ -1,4 +1,4 @@
-// Narik data live dari GitHub REST API (unauthenticated, 60 req/jam — cukup buat porto).
+// Narik data live dari GitHub REST API (unauthenticated, 60 req/jam, cukup buat porto).
 const API = 'https://api.github.com'
 
 export async function fetchGithub(username) {

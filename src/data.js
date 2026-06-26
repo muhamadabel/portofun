@@ -6,21 +6,21 @@ export const profile = {
   username: 'muhamadabel', // GitHub
   location: 'Indonesia',
   email: 'muhamadabelugm@gmail.com',
-  tagline: 'Rapi di kode, niat di tampilan.',
+  tagline: 'Rapi di kode, rapi di tampilan.',
   about: [
-    'Frontend dev yang ngurusin detail sampai beres — bukan tipe "yaudah jadi". Sehari-hari di React, Next.js, sama Laravel, bikin sistem yang beneran dipake orang, bukan cuma cakep di Figma.',
-    'Lagi getol automated testing (Selenium + Cucumber) biar tiap deploy nggak bikin jantungan. Buat gw, hal kecil kayak micro-interaction, loading state, sama error yang manusiawi itu yang bikin web kerasa beda.',
+    'Frontend developer yang suka memperhatikan detail sampai rapi. Sehari-hari memakai React, Next.js, dan Laravel untuk membangun sistem yang nyaman dipakai dan mudah dirawat.',
+    'Saat ini sedang mendalami automated testing dengan Selenium dan Cucumber supaya setiap rilis lebih terjaga. Buat saya, hal kecil seperti micro-interaction, loading state, dan pesan error yang jelas itulah yang membuat sebuah web terasa berbeda.',
   ],
   focus: [
-    'Bikin sistem informasi web — React · Next.js · Laravel',
-    'Automated end-to-end testing — Selenium · Cucumber',
-    'Ngulik UI/UX, accessibility & arsitektur frontend',
-    'Bikin UI yang kerasa "mahal" tapi tetep ringan',
+    'Membangun sistem informasi web (React, Next.js, Laravel)',
+    'Automated end-to-end testing (Selenium, Cucumber)',
+    'Mendalami UI/UX, accessibility, dan arsitektur frontend',
+    'Membuat antarmuka yang rapi tapi tetap ringan',
   ],
   facts: [
     { value: '3+', label: 'Tahun ngoding' },
     { value: '10+', label: 'Project digarap' },
-    { value: '777', label: 'Lucky number' },
+    { value: '21', label: 'Lucky number' },
   ],
   socials: [
     { label: 'GitHub', handle: '@muhamadabel', href: 'https://github.com/muhamadabel' },
@@ -47,12 +47,12 @@ export const skills = [
   'Selenium', 'Cucumber', 'Figma', 'PHP', 'Java', 'Git',
 ]
 
-// project unggulan (kurasi) — di luar repo live dari GitHub
+// project unggulan (kurasi), di luar repo live dari GitHub
 export const projects = [
   {
     title: 'SIA UGN',
     blurb:
-      'Sistem Informasi Akademik Universitas — modul dosen (BKD, PAK, pengabdian). Frontend React + backend Laravel.',
+      'Sistem Informasi Akademik Universitas, modul dosen (BKD, PAK, pengabdian). Frontend React, backend Laravel.',
     tags: ['React', 'Laravel', 'Sistem Informasi'],
     href: 'https://sia.trisuladana.com/',
   },
@@ -72,7 +72,7 @@ export const projects = [
   {
     title: 'This Portfolio',
     blurb:
-      'Website ini — porto bergaya culture biru/cream Y2K, bintang 3D, narik data live dari GitHub. React Three Fiber.',
+      'Website ini sendiri. Porto bergaya culture biru/cream Y2K, bintang 3D, dan data live dari GitHub. React Three Fiber.',
     tags: ['React', 'R3F', 'Design'],
     href: '#',
   },

@@ -10,7 +10,7 @@ export default function Stack() {
       <Sparkle className="front" style={{ top: '34%', right: '12%' }} color="var(--blue)" />
 
       <Reveal as="div" className="eyebrow">
-        tech stack — senjata
+        tech stack · senjata
       </Reveal>
       <Reveal as="h2" className="section-title" delay={50}>
         Tools of the <em>trade</em>

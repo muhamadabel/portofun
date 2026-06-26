@@ -11,7 +11,7 @@ export default function Projects() {
       <Sparkle className="front" style={{ top: '14%', left: '32%' }} color="var(--green)" />
 
       <Reveal as="div" className="eyebrow">
-        work — karya pilihan
+        work · karya pilihan
       </Reveal>
       <Reveal as="h2" className="section-title" delay={50}>
         Selected <em>work</em>

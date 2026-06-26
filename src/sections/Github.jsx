@@ -51,7 +51,7 @@ export default function Github() {
       <Sparkle className="front" style={{ top: '16%', left: '34%' }} color="var(--yellow)" />
 
       <Reveal as="div" className="eyebrow">
-        github — live dari @{U}
+        github · live dari @{U}
       </Reveal>
       <Reveal as="h2" className="section-title" delay={50}>
         Straight from <em>GitHub</em>
@@ -108,7 +108,7 @@ export default function Github() {
         </div>
       )}
 
-      {/* stats images (theme-matched) — load pas keliatan aja */}
+      {/* stats images (theme-matched), load pas keliatan aja */}
       {showStats && (
         <Reveal delay={120}>
           <div

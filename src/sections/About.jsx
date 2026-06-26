@@ -13,7 +13,7 @@ export default function About() {
       <Sparkle className="front" style={{ top: '20%', left: '30%' }} color="var(--pink)" />
 
       <Reveal as="div" className="eyebrow">
-        about — tentang gw
+        about · tentang saya
       </Reveal>
       <Reveal as="h2" className="section-title" delay={50}>
         Hi, I'm <em>Abel</em> 👋

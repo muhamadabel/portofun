@@ -5,7 +5,7 @@ export default function Nav() {
         <span className="mark">A</span>
         <span className="who">
           <b>ABEL</b>
-          <span>frontend dev · ★ 777</span>
+          <span>frontend dev · ★ 21</span>
         </span>
       </a>
 
