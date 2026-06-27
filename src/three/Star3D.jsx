@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Environment, Lightformer } from '@react-three/drei'
 import * as THREE from 'three'
+import { theme } from '../store.js'
 
 // Bikin geometry bintang 5-sudut yang di-extrude + bevel (glossy).
 function useStarGeo(outer = 1.55, inner = 0.66, depth = 0.55) {
@@ -29,10 +30,10 @@ function useStarGeo(outer = 1.55, inner = 0.66, depth = 0.55) {
   }, [outer, inner, depth])
 }
 
-function Star({ geo, color, scale = 1, ...props }) {
+function Star({ geo, color, scale = 1, matRef, ...props }) {
   return (
     <mesh geometry={geo} scale={scale} {...props}>
-      <meshStandardMaterial color={color} metalness={0.35} roughness={0.18} />
+      <meshStandardMaterial ref={matRef} color={color} metalness={0.35} roughness={0.18} />
     </mesh>
   )
 }
@@ -40,11 +41,14 @@ function Star({ geo, color, scale = 1, ...props }) {
 export default function Star3D() {
   const big = useRef()
   const mini = useRef()
+  const bigMat = useRef()
   const geo = useStarGeo()
   const geoMini = useStarGeo(1.55, 0.66, 0.55)
 
   useFrame((state, delta) => {
     const t = state.clock.elapsedTime
+    // bintang gede ngikutin warna aksen yang dipilih pengunjung
+    if (bigMat.current) bigMat.current.color.set(theme.accent)
     if (big.current) {
       big.current.rotation.y += delta * 0.5
       big.current.rotation.x = -0.18 + Math.sin(t * 0.5) * 0.12 + state.pointer.y * 0.12
@@ -71,7 +75,7 @@ export default function Star3D() {
       </Environment>
 
       <group ref={big}>
-        <Star geo={geo} color="#1e3ae0" />
+        <Star geo={geo} color="#1e3ae0" matRef={bigMat} />
       </group>
       <group ref={mini} scale={0.32}>
         <Star geo={geoMini} color="#e85a93" />

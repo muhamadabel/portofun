@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import Reveal from '../ui/Reveal.jsx'
 import { projects } from '../data.js'
 import { Badge, Car, CarWatermark, Sparkle } from '../ui/Decor.jsx'
+import ProjectModal from '../ui/ProjectModal.jsx'
 
 export default function Projects() {
+  const [active, setActive] = useState(null)
+
   return (
     <section id="work">
       <CarWatermark style={{ bottom: '-6%', left: '-8%' }} />
@@ -20,11 +24,12 @@ export default function Projects() {
       <div className="project-list">
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={i * 70}>
-            <a
+            <div
               className="project"
-              href={p.href}
-              target={p.href === '#' ? undefined : '_blank'}
-              rel="noreferrer"
+              role="button"
+              tabIndex={0}
+              onClick={() => setActive(p)}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive(p)}
             >
               <span className="idx">{String(i + 1).padStart(2, '0')}</span>
               <div className="meta">
@@ -37,10 +42,12 @@ export default function Projects() {
                 </div>
               </div>
               <span className="arrow">→</span>
-            </a>
+            </div>
           </Reveal>
         ))}
       </div>
+
+      <ProjectModal project={active} onClose={() => setActive(null)} />
     </section>
   )
 }

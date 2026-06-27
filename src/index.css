@@ -1071,6 +1071,182 @@ section {
   }
 }
 
+/* ---------- PROJECT MODAL ---------- */
+.project {
+  cursor: pointer;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(22, 33, 62, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: modalbg 0.25s ease;
+}
+@keyframes modalbg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-card {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: 86vh;
+  overflow-y: auto;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--blue);
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  animation: modalpop 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes modalpop {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.modal-close:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.modal-meta {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+.modal-meta span {
+  border: 1.5px solid var(--line);
+  padding: 0.2rem 0.5rem;
+}
+.modal-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1;
+  margin-bottom: 0.9rem;
+  color: var(--blue);
+}
+.modal-detail {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+.modal-highlights {
+  list-style: none;
+  margin: 1.1rem 0;
+}
+.modal-highlights li {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  padding: 0.45rem 0;
+  display: flex;
+  gap: 0.6rem;
+  border-bottom: 1px dashed var(--line);
+}
+.modal-highlights li::before {
+  content: '✦';
+  color: var(--blue);
+}
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.3rem;
+}
+.modal-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border: 1.5px solid var(--ink);
+}
+.modal-cta {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 0.7rem 1.3rem;
+  transition: background 0.2s;
+}
+.modal-cta:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ---------- ACCENT SWITCHER ---------- */
+.accent-switch {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.accent-switch .lbl {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.accent-switch button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s;
+}
+.accent-switch button:hover {
+  transform: scale(1.2);
+}
+.accent-switch button[data-on='true'] {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
+}
+@media (max-width: 760px) {
+  .accent-switch {
+    left: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.4rem 0.55rem;
+  }
+  .accent-switch .lbl {
+    display: none;
+  }
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 760px) {
   /* sembunyiin siluet yg numpuk & nutupin teks di layar kecil */

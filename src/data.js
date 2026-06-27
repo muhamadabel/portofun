@@ -55,28 +55,64 @@ export const skills = [
 export const projects = [
   {
     title: 'SIA UGN',
+    year: '2025',
+    role: 'Frontend Developer',
     blurb:
       'Sistem Informasi Akademik Universitas, modul dosen (BKD, PAK, pengabdian). Frontend React, backend Laravel.',
+    detail:
+      'Sistem Informasi Akademik untuk universitas. Saya menggarap sisi frontend untuk modul dosen: Beban Kerja Dosen (BKD), Penilaian Angka Kredit (PAK), dan pengabdian. Frontend dibangun dengan React dan terhubung ke backend Laravel lewat REST API.',
+    highlights: [
+      'Modul dosen: BKD, PAK, dan pengabdian',
+      'Integrasi REST API ke backend Laravel',
+      'Fokus ke form panjang yang tetap rapi dan enak diisi',
+    ],
     tags: ['React', 'Laravel', 'Sistem Informasi'],
     href: 'https://sia.trisuladana.com/',
   },
   {
     title: 'Rongsokin',
+    year: '2025',
+    role: 'Mobile Developer',
     blurb: 'Aplikasi jual-beli barang rongsok / daur ulang. Dibangun pakai Flutter.',
+    detail:
+      'Aplikasi jual-beli barang rongsok dan daur ulang. Dibangun dengan Flutter, fokus ke tampilan yang bersih dan alur yang gampang dipahami pengguna.',
+    highlights: [
+      'Dibangun dengan Flutter (Dart)',
+      'UI bersih dengan alur yang sederhana',
+      'Versi web bisa diakses online',
+    ],
     tags: ['Flutter', 'Dart', 'Mobile'],
     href: 'https://rongsokin.vercel.app/',
   },
   {
     title: 'E2E Testing Suite',
+    year: '2025',
+    role: 'QA / Automation',
     blurb:
-      'Automation testing modul dosen pakai Java + Selenium + Cucumber + Page Object Model. 21/21 skenario PASS.',
+      'Automation testing modul dosen pakai Java, Selenium, Cucumber, dan Page Object Model. 21/21 skenario PASS.',
+    detail:
+      'Automation testing untuk modul dosen memakai Java, Selenium, Cucumber, dan pola Page Object Model. Semua skenario yang dirancang lolos pengujian.',
+    highlights: [
+      'Java, Selenium, dan Cucumber',
+      'Pola Page Object Model biar test rapi dan mudah dirawat',
+      '21 dari 21 skenario PASS',
+    ],
     tags: ['Selenium', 'Cucumber', 'Java'],
     href: '#',
   },
   {
     title: 'This Portfolio',
+    year: '2026',
+    role: 'Design + Build',
     blurb:
       'Website ini sendiri. Porto bergaya culture biru/cream Y2K, bintang 3D, dan data live dari GitHub. React Three Fiber.',
+    detail:
+      'Website ini sendiri. Bertema culture biru/cream Y2K dengan bintang 3D, dekor animasi, dan data yang ditarik langsung dari GitHub. Dibikin dari nol tanpa template.',
+    highlights: [
+      'React Three Fiber untuk elemen 3D',
+      'Data repo dan profil live dari GitHub API',
+      'Font custom, parallax, kursor sparkle, dan tilt 3D',
+    ],
     tags: ['React', 'R3F', 'Design'],
     href: '#',
   },

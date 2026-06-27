@@ -10,3 +10,8 @@ export const audioState = {
   level: 0,
   playing: false,
 }
+
+// Warna aksen aktif (bisa diganti pengunjung via AccentSwitcher). Dibaca Star3D.
+export const theme = {
+  accent: '#1e3ae0',
+}

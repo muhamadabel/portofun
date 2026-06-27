@@ -14,6 +14,7 @@ import { Checker } from './ui/Decor.jsx'
 import Parallax from './ui/Parallax.jsx'
 import CursorTrail from './ui/CursorTrail.jsx'
 import Interactions from './ui/Interactions.jsx'
+import AccentSwitcher from './ui/AccentSwitcher.jsx'
 import { scrollState } from './store.js'
 
 export default function App() {
@@ -105,6 +106,7 @@ export default function App() {
 
       <div className="grain" />
 
+      <AccentSwitcher />
       <CursorTrail />
       <Interactions />
     </>
