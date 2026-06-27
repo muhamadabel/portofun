@@ -22,6 +22,9 @@ export const profile = {
     { value: '10+', label: 'Project digarap' },
     { value: '21', label: 'Lucky number' },
   ],
+  // Form kontak: bikin form gratis di https://formspree.io, lalu ganti ID di bawah.
+  // Selama masih 'xxxxxxxx', form otomatis fallback ke buka aplikasi email (mailto).
+  formspree: 'https://formspree.io/f/xxxxxxxx',
   socials: [
     { label: 'GitHub', handle: '@muhamadabel', href: 'https://github.com/muhamadabel' },
     {

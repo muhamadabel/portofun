@@ -956,6 +956,121 @@ section {
 .deco.sparkle:nth-of-type(even) svg { animation-duration: 3.9s !important; animation-delay: -1.6s; }
 .deco.star:nth-of-type(3n) svg { animation-delay: -4s; }
 
+/* ---------- CURSOR SPARKLE TRAIL ---------- */
+.spark {
+  position: fixed;
+  z-index: 65;
+  pointer-events: none;
+  font-size: 15px;
+  line-height: 1;
+  transform: translate(-50%, -50%) rotate(var(--r));
+  animation: sparkfade 0.75s ease-out forwards;
+  will-change: transform, opacity;
+  text-shadow: 0 0 6px currentColor;
+}
+@keyframes sparkfade {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3) rotate(var(--r)); }
+  25% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + 14px)) scale(1.25)
+      rotate(calc(var(--r) + 50deg));
+  }
+}
+
+/* tilt: bikin update transform agak crisp (override transisi default kartu) */
+.repo,
+.stack-card {
+  transition: transform 0.12s ease, box-shadow 0.25s ease, background 0.2s ease;
+}
+
+/* ---------- CONTACT FORM ---------- */
+.contact-form {
+  max-width: 560px;
+  margin: 2.4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+}
+.contact-form .row2 {
+  display: flex;
+  gap: 0.8rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 2px solid var(--ink);
+  padding: 0.8rem 1rem;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 4px 4px 0 var(--blue);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--ink-soft);
+}
+.contact-form button {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--paper);
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.contact-form button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.form-err {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--orange);
+}
+.form-done {
+  max-width: 560px;
+  margin: 2.4rem auto 0;
+  border: 2px solid var(--ink);
+  background: var(--paper-2);
+  box-shadow: 7px 7px 0 var(--blue);
+  padding: 1.6rem;
+  text-align: left;
+}
+.form-done b {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.4rem;
+  display: block;
+}
+.form-done p {
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+}
+@media (max-width: 600px) {
+  .contact-form .row2 {
+    flex-direction: column;
+  }
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 760px) {
   /* sembunyiin siluet yg numpuk & nutupin teks di layar kecil */

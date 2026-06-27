@@ -1,6 +1,7 @@
 import Reveal from '../ui/Reveal.jsx'
 import { profile } from '../data.js'
 import { Star, Sparkle, Car } from '../ui/Decor.jsx'
+import ContactForm from '../ui/ContactForm.jsx'
 
 export default function Contact() {
   return (
@@ -17,7 +18,11 @@ export default function Contact() {
         Let's <em>connect</em>
       </Reveal>
 
-      <Reveal className="links" delay={130}>
+      <Reveal delay={120}>
+        <ContactForm />
+      </Reveal>
+
+      <Reveal className="links" delay={170}>
         {profile.socials.map((s) => (
           <a key={s.label} href={s.href} target="_blank" rel="noreferrer">
             <b>{s.label}</b>
