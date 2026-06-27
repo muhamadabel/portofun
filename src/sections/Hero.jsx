@@ -19,9 +19,9 @@ export default function Hero() {
       </div>
 
       <h1>
-        FRONT<span className="out">END</span>
+        SOFT<span className="out">WARE</span>
         <br />
-        <span className="blue">DEV</span>★
+        <span className="blue">ENG</span>★
       </h1>
 
       <p className="sub">

@@ -2,13 +2,13 @@
 export const profile = {
   name: 'Muhammad Abel Abhinaya',
   short: 'ABEL',
-  role: 'Frontend Developer',
+  role: 'Software Engineer',
   username: 'muhamadabel', // GitHub
   location: 'Indonesia',
   email: 'muhamadabelugm@gmail.com',
   tagline: 'Rapi di kode, rapi di tampilan.',
   about: [
-    'Frontend developer yang suka memperhatikan detail sampai rapi. Sehari-hari memakai React, Next.js, dan Laravel untuk membangun sistem yang nyaman dipakai dan mudah dirawat.',
+    'Software engineer yang suka memperhatikan detail sampai rapi. Sehari-hari memakai React, Next.js, dan Laravel untuk membangun sistem yang nyaman dipakai dan mudah dirawat.',
     'Saat ini sedang mendalami automated testing dengan Selenium dan Cucumber supaya setiap rilis lebih terjaga. Buat saya, hal kecil seperti micro-interaction, loading state, dan pesan error yang jelas itulah yang membuat sebuah web terasa berbeda.',
   ],
   focus: [
@@ -59,7 +59,7 @@ export const projects = [
   {
     title: 'SIA UGN',
     year: '2025',
-    role: 'Frontend Developer',
+    role: 'Software Engineer',
     blurb:
       'Sistem Informasi Akademik Universitas, modul dosen (BKD, PAK, pengabdian). Frontend React, backend Laravel.',
     detail:

@@ -148,7 +148,7 @@ export function CarWatermark({ className = '', style }) {
 
 // Emblem bundar JDM dengan teks melingkar (muter pelan).
 export function Badge({
-  text = 'FRONTEND DEVELOPER · EST 2026 · ',
+  text = 'SOFTWARE ENGINEER · EST 2026 · ',
   center = '★',
   className = '',
   style,
