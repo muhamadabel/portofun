@@ -86,6 +86,7 @@ function Wheel({ cx, detail }) {
 export function CarSvg({ detail = true }) {
   return (
     <svg viewBox="0 0 240 115">
+     <g transform="translate(240,0) scale(-1,1)">
       {/* sayap GT (swan-neck) */}
       <g fill="currentColor">
         <path d="M182 60 L186 42 L191 42 L187 60 Z" />
@@ -122,6 +123,7 @@ export function CarSvg({ detail = true }) {
 
       <Wheel cx={56} detail={detail} />
       <Wheel cx={174} detail={detail} />
+     </g>
     </svg>
   )
 }

@@ -1,6 +1,23 @@
 import { useState } from 'react'
 import { profile } from '../data.js'
 
+const BURST_COLORS = ['#1e3ae0', '#e8632a', '#1f9e6e', '#e85a93', '#f4b41a']
+function confettiBurst() {
+  for (let k = 0; k < 28; k++) {
+    const s = document.createElement('span')
+    s.className = 'spark burst-spark'
+    s.textContent = k % 2 ? '✦' : '★'
+    s.style.left = '50%'
+    s.style.top = '40%'
+    s.style.color = BURST_COLORS[k % BURST_COLORS.length]
+    s.style.fontSize = 12 + Math.random() * 16 + 'px'
+    s.style.setProperty('--bx', (Math.random() * 2 - 1) * window.innerWidth * 0.42 + 'px')
+    s.style.setProperty('--by', (Math.random() * 2 - 1) * window.innerHeight * 0.4 + 'px')
+    document.body.appendChild(s)
+    setTimeout(() => s.remove(), 1100)
+  }
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
@@ -26,6 +43,7 @@ export default function ContactForm() {
       if (res.ok && (data.success === 'true' || data.success === true)) {
         setStatus('sent')
         form.reset()
+        confettiBurst()
       } else if (msg.includes('activ')) {
         setStatus('pending')
       } else {

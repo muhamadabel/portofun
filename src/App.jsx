@@ -17,6 +17,7 @@ import Interactions from './ui/Interactions.jsx'
 import AccentSwitcher from './ui/AccentSwitcher.jsx'
 import ScrollProgressCar from './ui/ScrollProgressCar.jsx'
 import PartyMode from './ui/PartyMode.jsx'
+import BackToTop from './ui/BackToTop.jsx'
 import { scrollState } from './store.js'
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
       smoothWheel: true,
     })
     lenisRef.current = lenis
+    window.__lenis = lenis
 
     lenis.on('scroll', ({ progress, velocity }) => {
       scrollState.progress = progress
@@ -109,6 +111,7 @@ export default function App() {
       <div className="grain" />
 
       <AccentSwitcher />
+      <BackToTop />
       <ScrollProgressCar />
       <CursorTrail />
       <Interactions />
