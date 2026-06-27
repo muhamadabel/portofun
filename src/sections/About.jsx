@@ -1,6 +1,7 @@
 import Reveal from '../ui/Reveal.jsx'
 import { profile } from '../data.js'
 import { Flower, Star, Sparkle } from '../ui/Decor.jsx'
+import CountUp from '../ui/CountUp.jsx'
 
 export default function About() {
   return (
@@ -27,7 +28,9 @@ export default function About() {
           <div className="facts-row">
             {profile.facts.map((f) => (
               <div className="f" key={f.label}>
-                <b>{f.value}</b>
+                <b>
+                  <CountUp value={f.value} />
+                </b>
                 <span>{f.label}</span>
               </div>
             ))}

@@ -1247,6 +1247,86 @@ section {
   }
 }
 
+/* ---------- SCROLL PROGRESS CAR ---------- */
+.progress-road {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  z-index: 38;
+  pointer-events: none;
+}
+.progress-road::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 2px;
+  background: rgba(22, 33, 62, 0.18);
+}
+.road-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 2px;
+  background: var(--blue);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.road-car {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34px;
+  color: var(--ink);
+  transform: translateX(-50%);
+  transition: left 0.1s linear;
+}
+.road-car svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- CV BUTTON ---------- */
+.cv-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-head);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  background: var(--blue);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 0.7rem 1.3rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.cv-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+/* ---------- PARTY MODE (easter egg) ---------- */
+.party-spark {
+  z-index: 80;
+  animation-name: partyfall !important;
+  animation-timing-function: ease-in !important;
+  animation-iteration-count: 1 !important;
+  animation-fill-mode: forwards !important;
+  text-shadow: 0 0 8px currentColor;
+}
+@keyframes partyfall {
+  0% { opacity: 0; transform: translate(-50%, 0) rotate(0deg); }
+  10% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, var(--fall)) rotate(360deg); }
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 760px) {
   /* sembunyiin siluet yg numpuk & nutupin teks di layar kecil */

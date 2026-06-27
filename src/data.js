@@ -22,6 +22,9 @@ export const profile = {
     { value: '10+', label: 'Project digarap' },
     { value: '21', label: 'Lucky number' },
   ],
+  // Tombol Download CV: taruh file di public/cv.pdf lalu set '/cv.pdf',
+  // atau pakai link Google Drive. Kosongin '' kalau belum ada (tombol disembunyiin).
+  cvUrl: '',
   // Form kontak pakai FormSubmit (tanpa daftar). Pesan masuk ke email di bawah.
   // PENTING: submit pertama kali bakal ngirim email konfirmasi ke inbox kamu,
   // klik link "Activate Form" sekali, setelah itu semua pesan otomatis masuk.

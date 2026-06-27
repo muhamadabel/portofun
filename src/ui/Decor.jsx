@@ -83,7 +83,7 @@ function Wheel({ cx, detail }) {
 }
 
 // Porsche 911 RWB widebody, side profile + sayap GT.
-function CarSvg({ detail = true }) {
+export function CarSvg({ detail = true }) {
   return (
     <svg viewBox="0 0 240 115">
       {/* sayap GT (swan-neck) */}

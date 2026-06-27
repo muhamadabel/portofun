@@ -40,6 +40,12 @@ export default function Hero() {
         </span>
       </div>
 
+      {profile.cvUrl && (
+        <a className="cv-btn" href={profile.cvUrl} target="_blank" rel="noreferrer" download>
+          Download CV ↓
+        </a>
+      )}
+
       <div className="scroll-hint">scroll ↓</div>
     </section>
   )

@@ -15,6 +15,8 @@ import Parallax from './ui/Parallax.jsx'
 import CursorTrail from './ui/CursorTrail.jsx'
 import Interactions from './ui/Interactions.jsx'
 import AccentSwitcher from './ui/AccentSwitcher.jsx'
+import ScrollProgressCar from './ui/ScrollProgressCar.jsx'
+import PartyMode from './ui/PartyMode.jsx'
 import { scrollState } from './store.js'
 
 export default function App() {
@@ -107,8 +109,10 @@ export default function App() {
       <div className="grain" />
 
       <AccentSwitcher />
+      <ScrollProgressCar />
       <CursorTrail />
       <Interactions />
+      <PartyMode />
     </>
   )
 }
