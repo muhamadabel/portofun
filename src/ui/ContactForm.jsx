@@ -3,34 +3,26 @@ import { profile } from '../data.js'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
-  const usingFormspree = !profile.formspree.includes('xxxx')
 
   const onSubmit = async (e) => {
     e.preventDefault()
     const form = e.target
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    }
-
-    // Fallback kalau Formspree belum di-setup: buka aplikasi email.
-    if (!usingFormspree) {
-      const body = encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`)
-      const subject = encodeURIComponent(`Halo Abel, dari ${data.name}`)
-      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
-      setStatus('sent')
-      return
-    }
-
     setStatus('sending')
     try {
-      const res = await fetch(profile.formspree, {
+      const res = await fetch(profile.formEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+          _subject: `Pesan baru dari ${form.name.value} (porto)`,
+          _template: 'box',
+          _captcha: 'false',
+        }),
       })
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}))
+      if (res.ok && (data.success === 'true' || data.success === true)) {
         setStatus('sent')
         form.reset()
       } else {
@@ -61,7 +53,7 @@ export default function ContactForm() {
         {status === 'sending' ? 'Ngirim…' : 'Kirim pesan ↗'}
       </button>
       {status === 'error' && (
-        <span className="form-err">Gagal ngirim, coba lagi atau email langsung aja.</span>
+        <span className="form-err">Gagal ngirim, coba lagi atau DM/email langsung aja ya.</span>
       )}
     </form>
   )
