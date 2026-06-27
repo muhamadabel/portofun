@@ -22,9 +22,12 @@ export default function ContactForm() {
         }),
       })
       const data = await res.json().catch(() => ({}))
+      const msg = String(data.message || '').toLowerCase()
       if (res.ok && (data.success === 'true' || data.success === true)) {
         setStatus('sent')
         form.reset()
+      } else if (msg.includes('activ')) {
+        setStatus('pending')
       } else {
         setStatus('error')
       }
@@ -38,6 +41,15 @@ export default function ContactForm() {
       <div className="form-done">
         <b>Terkirim! ✦</b>
         <p>Makasih udah mampir, aku bakal bales secepatnya.</p>
+      </div>
+    )
+  }
+
+  if (status === 'pending') {
+    return (
+      <div className="form-done">
+        <b>Sebentar ya ✦</b>
+        <p>Form lagi diaktivasi. Coba kirim lagi beberapa saat lagi, pesanmu bakal langsung masuk.</p>
       </div>
     )
   }
