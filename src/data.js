@@ -37,6 +37,7 @@ export const profile = {
       href: 'https://www.linkedin.com/in/muhammad-abel-abhinaya-riananto-944376326/',
     },
     { label: 'Instagram', handle: '@mhmmdabel._', href: 'https://instagram.com/mhmmdabel._' },
+    { label: 'TikTok', handle: '@belnomercy', href: 'https://www.tiktok.com/@belnomercy' },
     { label: 'Email', handle: 'muhamadabelugm@gmail.com', href: 'mailto:muhamadabelugm@gmail.com' },
   ],
 }
