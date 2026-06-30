@@ -5,7 +5,7 @@ export const profile = {
   role: 'Software Engineer',
   username: 'muhamadabel', // GitHub
   location: 'Indonesia',
-  email: 'muhamadabelugm@gmail.com',
+  email: 'muhammadabelabhinaya@mail.ugm.ac.id',
   tagline: 'Rapi di kode, rapi di tampilan.',
   about: [
     'Software engineer yang suka memperhatikan detail sampai rapi. Sehari-hari memakai React, Next.js, dan Laravel untuk membangun sistem yang nyaman dipakai dan mudah dirawat.',
@@ -38,7 +38,7 @@ export const profile = {
     },
     { label: 'Instagram', handle: '@mhmmdabel._', href: 'https://instagram.com/mhmmdabel._' },
     { label: 'TikTok', handle: '@belnomercy', href: 'https://www.tiktok.com/@belnomercy' },
-    { label: 'Email', handle: 'muhamadabelugm@gmail.com', href: 'mailto:muhamadabelugm@gmail.com' },
+    { label: 'Email', handle: 'muhammadabelabhinaya@mail.ugm.ac.id', href: 'mailto:muhammadabelabhinaya@mail.ugm.ac.id' },
   ],
 }
 
